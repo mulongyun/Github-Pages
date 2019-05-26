@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<style type="text/css">
+		#big {
+			width: 410px;
+			height: 430px;
+			border: 2px solid red;
+			overflow: hidden;
+		}
+		img {
+			transform-origin: left top;
+			transform: scale(0.4);
+		}
+		#zhaopian {
+			background-color: coral;
+			color: white;
+			text-align: center;
+		}
+		h3 {
+			color: coral;
+		}
+		#img0 {
+			background-size: contain;
+			transition-duration: 1s;
+			height: 270px;
+		}
+		#tex {
+			background-color: white;
+			border: 1px solid blue;
+			height: 300px;
+			width: 410px;
+			transition-duration: 1s;
+		}
+		#big:hover #img0{
+			transform:scale(2,2);
+			box-shadow: 0 0 500px 70px rgb(71, 71, 71) inset;
+		}
+		#big:hover #tex{
+			transform:translate(0px,-90px);
+		}
+		#big:hover #active{
+			display: inline-block;
+		}
+		#active{
+			display:none;
+		}
+		#zhaopian{
+			z-index: 4;
+			transition-duration: 1s;
+			position: absolute;
+			left:8px;
+			top: 280px;
+		}
+		#big:hover #zhaopian{
+			top: 190px;
+		}
+		#xiyatu{
+			position: absolute;
+			left: 335px;
+			top: 10px;
+			z-index: 5;
+			background-color: orange;
+			width: 60px;
+			height: 60px;
+			border-radius:30px 30px; 
+			color:white;
+			text-align:center;
+		}
+		.pinglun{
+			padding-left: 10px;
+			color:peru;
+		}
+	</style>
+</head>
+<body>
+	<div id="xiyatu">五月二十五</div>
+	<div id='big'>
+		<div id="img0" style="background-image: url(zhanqiao.jpg)"></div>
+		<span id='zhaopian' style="margin-top: -20px">照片</span>
+		<div id="tex">
+			<h2>青岛栈桥</h2>
+			<h3>国家AAAA级旅游景区</h3>
+			<div id="active">青岛栈桥是青岛海滨风景区的景点之一，是国务院于1982年首批公布的国家级风景名胜区，
+				也是首批国家AAAA级旅游景区.青岛栈桥位于游人如织的青岛中山路南端，
+				桥身从海岸探入如弯月般的青岛湾深处。桥身供游人参观并在此停靠旅游船，由此乘船可看海上青岛。
+			</div>
+		</div>
+		<div  style="width: 410px; z-index: 10;position:absolute;top:420px;left: 10px;background-color:white;display: block;">
+			<span class="pinglun">10分钟前</span>
+			<span class="pinglun">123评论</span>
+		</div>
+	</div>
+</body>
+</html>
